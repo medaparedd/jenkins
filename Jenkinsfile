@@ -45,7 +45,7 @@ pipeline {
         stage('check params') {
             steps {
                 sh """
-                echo "$BIOGRAPHY"
+                echo "${BIOGRAPHY}"
                 """
             }
     
