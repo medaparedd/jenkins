@@ -9,6 +9,11 @@ pipeline {
         GREETING = "HELLO AKSHIT"
     }
 
+    options {
+        timeout(time: 1, unit: 'HOURS')
+        disableConcurrentBuilds()
+    }
+
     stages {
         stage('build') {
          steps {
@@ -24,7 +29,7 @@ pipeline {
         stage('deploy') {
             steps {
                 sh """
-                env
+                
                 echo "hi"
                 """
             }
