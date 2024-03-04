@@ -5,6 +5,10 @@ pipeline {
         }
     }
 
+    environment {
+        GREETING = "HELLO AKSHIT"
+    }
+
     stages {
         stage('build') {
          steps {
@@ -19,7 +23,10 @@ pipeline {
 
         stage('deploy') {
             steps {
-                echo "deploying"
+                sh """
+                env
+                echo "hi"
+                """
             }
         }
     }  
