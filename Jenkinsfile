@@ -38,18 +38,11 @@ pipeline {
             steps {
                 sh """
                 
-                echo "hi"
+                echo "namasthe"
                 """
             }
         }
-        stage('check params') {
-            steps {
-                sh """
-                echo "${BIOGRAPHY}"
-                """
-            }
-    
-        }
+        
     }  
         post { 
          always { 
